@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/myorders.css';
 import { Container } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
+import { memo } from 'react';
 function MyOrder(){
     const orders = useSelector((state)=>state.myorders.orders);
     const tax=useSelector((state)=>state.myorders.tax);
@@ -43,4 +44,4 @@ function MyOrder(){
     </>
     );
 }
-export default MyOrder;
+export default memo(MyOrder);

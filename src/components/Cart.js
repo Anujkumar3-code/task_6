@@ -1,5 +1,6 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { memo } from 'react';
 import { Col, Container, Row, Alert } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import CartForm from './CartForm';
@@ -32,4 +33,4 @@ function Cart(){
     </>
     );
 }
-export default Cart;
+export default memo(Cart);

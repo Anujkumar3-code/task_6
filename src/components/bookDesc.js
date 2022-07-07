@@ -1,4 +1,4 @@
-
+import { memo } from 'react';
 import { useState } from 'react';
 import { Button , Alert} from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
@@ -49,4 +49,4 @@ function BookDesc(){
         </>
     );
 }
-export default BookDesc;
+export default memo(BookDesc);

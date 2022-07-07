@@ -1,20 +1,25 @@
 
-import Item from "./Item";
+//import Item from "./Item";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { memo } from 'react';
 import '../style/item.css';
-const books = require("../books.js").books;
+import { lazy, Suspense} from "react";
+const Item = lazy(()=>import("./Item"));
+const books =require("../books.js").books;
 
 function Home() {
-  const bookList = [];
-  books.forEach((book)=>{
-    bookList.push(<Item book={book} image ={book.thumbnailUrl} title = {book.title} description={book.longDescription} isbn={book.isbn} key={book.isbn}/>);
-  });
+ 
   return (
     <>
       <div className="card_group">
-        {bookList}
+        
+        { books.map((book)=>{
+    return (<Suspense fallback={<div className='card'>Loading ...</div>} key={book.isbn}><Item book={book} key={book.isbn}/></Suspense>)
+  })}
+  
       </div >
+    
     </>
   );
 }
-export default Home;
+export default memo(Home);

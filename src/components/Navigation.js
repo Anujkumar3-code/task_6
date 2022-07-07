@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
-import { Button } from "react-bootstrap";
 
 function Navigation({title}){
   const [topnav, setTopnav] = useState(false);
@@ -19,19 +18,7 @@ function Navigation({title}){
 </nav>
 </header>
         
-{/* <Navbar bg="light" expand="lg">
-  <Container>
-    <Navbar.Brand href="/">ecommerce</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/my_orders">My order</Nav.Link>
-        <Nav.Link href="/cart">Cart</Nav.Link>
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar> */}
+
       </>
         
     );

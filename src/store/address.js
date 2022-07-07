@@ -3,11 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const address= createSlice({
     name:'address',
     initialState:{
-        name:'address',
-        initialState:{
-            address:''
-        }
-    },
+            address:'123 street abc, london'
+        },
     reducers:{
         save(state,actions){
             state.address= actions.payload;
